@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../config/database');
-const Branch = require('../models/Branch');
+const Employee = require('../models/Employee');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 const bodyparser = require("body-parser");
@@ -10,22 +10,22 @@ var urlencodeParser = bodyparser.urlencoded({ extended: false });
 
 // Get gig list
 router.get('/', (req, res) => 
-Branch.findAll()
-    .then(branches => res.render('branches', {
-      branches
+Employee.findAll()
+    .then(employees => res.render('employees', {
+      employees
       }))
     .catch(err => console.log(err)));
     
 // Display add department form
-router.get('/addbranch', (req, res) => res.render('addbranch'));
+router.get('/addemployee', (req, res) => res.render('addemployee'));
 
 // Add a department
- router.post('/addbranch',urlencodeParser,(req, res) => {
+ router.post('/addemployee',urlencodeParser,(req, res) => {
   let { name, description, places_id,latlong } = req.body;
   let errors = [];
   // Check for errors
    if(errors.length > 0) {
-    res.render('addbranch', {
+    res.render('addemployee', {
       errors,
       name, 
       description, 
@@ -34,13 +34,13 @@ router.get('/addbranch', (req, res) => res.render('addbranch'));
     });
   } else {
     // Insert into table
-    Branch.create({
+    Employee.create({
       name, 
       description, 
       places_id,
       latlong
     })
-      .then(branches => res.redirect('/branch'))
+      .then(employee => res.redirect('/employee'))
       .catch(err => console.log(err));
   }
   
@@ -53,8 +53,8 @@ router.get('/search', (req, res) => {
   // Make lowercase
   term = term.toLowerCase();
 
-  Branch.findAll({ where: { name: { [Op.like]: '%' + term + '%' } } })
-    .then(branches => res.render('branches', { branches }))
+  Employee.findAll({ where: { name: { [Op.like]: '%' + term + '%' } } })
+    .then(employees => res.render('employees', { employees }))
     .catch(err => console.log(err));
 });
 module.exports = router;

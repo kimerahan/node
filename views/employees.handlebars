@@ -1,20 +1,18 @@
-<section id="gigs" class="container">
-    <h1>All Gigs</h1>
+<section id="branch" class="container">
+    <h3>All Employees</h3>
 
-    {{#each gigs}}
-      <div class="gig">
-      <h3>{{title}}</h3>
-      <p>{{description}}</p>
+    {{#each employees}}
+      <div class="employee">
+      <h4> Name: {{fist_name}} {{last_name}}</h4>
+
+      <h4></p>Branch: {{description}}</h4>
       <ul>
-        <li>Budget: {{budget}}</li>
-        <li><a href="mailto:{{contact_email}}" class="btn btn-reverse">Apply Now</a></li>
+        <li>places_id: {{places_id}}</li>
+         <li>latlong: {{latlong}}</li>
       </ul>
-      <div class="tech">
-        <small>Technologies Needed: <span>{{technologies}}</span></small>
-      </div>
     </div>
     {{else}}
-      <p>No gigs available</p>
+      <p>No Branches available</p>
     {{/each}}
     
   </section>

@@ -44,7 +44,7 @@ app.get('/', (req, res) => res.render('employees', { layout: 'landing' }));
 // Gig routes
 
 
-app.use('/employees', require('./routes/employees'));
+app.use('/employees', require('./routes/employee'));
 
 app.use('/departments', require('./routes/departments'));
 app.use('/branch', require('./routes/branch'));
