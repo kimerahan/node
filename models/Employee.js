@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database');
-
+const Branch = require('./Branch')
 const Employee = db.define('Employee', {
   fist_name: {
     type: Sequelize.STRING
@@ -14,9 +14,9 @@ const Employee = db.define('Employee', {
   department_id: {
     type: Sequelize.INTEGER
   },
-  branch_id: {
-    type: Sequelize.INTEGER
-  },
+  // branch_id: {
+  //   type: Sequelize.INTEGER
+  // },
   next_of_kin_contact: {
     type: Sequelize.STRING
   },
@@ -93,4 +93,5 @@ const Employee = db.define('Employee', {
 })
 
 //module.exports = seqmodel;
+Employee.belongsTo(Branch)
 module.exports = Employee;
