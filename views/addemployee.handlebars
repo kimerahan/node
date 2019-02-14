@@ -1,7 +1,7 @@
 
   <div class="col-md-auto">
     <div class="form-wrap">
-      <h1>Add A Branch</h1>
+      <h3>Add Employee</h3>
      
       {{#each errors}}
         <div class="error">
@@ -9,9 +9,8 @@
         </div>
       {{/each}}
       <div  class="row">
-        <h4 class="custom-modal-title">Add Employee</h4>
         <div class="custom-modal-text text-left">
-            <form method="POST" role="form" action="/employee/addemployee" enctype="multipart/form-data">
+            <form method="POST" role="form" action="/employees/addemployee" enctype="multipart/form-data">
                 
                 <div class="form-group">
                     <div class="col-md-6 m-b-10">
