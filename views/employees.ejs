@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo List</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+
+    </head>
+    <body>
+<ul>
+        <% for(var i= 0; i < rows.length; i++){ %>
+        <li> Name: <%= rows[i].Name %></li>
+        </li>Code: <%= rows[i].EmpCode %></li>
+        </li>Salary: <%= rows[i].Salary %></li>
+
+     <% } %>
+    </ul>
+</body>
+</html>

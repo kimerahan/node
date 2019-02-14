@@ -1,0 +1,20 @@
+<section id="gigs" class="container">
+    <h3>All Departments</h3>
+
+    {{#each departments}}
+      <div class="department">
+      <h4> Name: {{name}}</h4>
+      <h4></p>Description: {{description}}</h4>
+      <ul>
+        <li>Department Code: {{department_code}}</li>
+        {{!-- <li><a href="mailto:{{contact_email}}" class="btn btn-reverse">Apply Now</a></li> --}}
+      </ul>
+      {{!-- <div class="tech">
+        <small>Technologies Needed: <span>{{technologies}}</span></small>
+      </div> --}}
+    </div>
+    {{else}}
+      <p>No Employees available</p>
+    {{/each}}
+    
+  </section>

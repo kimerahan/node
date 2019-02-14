@@ -1,0 +1,36 @@
+
+  <div class="col-md-auto">
+    <div class="form-wrap">
+      <h1>Add A Branch</h1>
+     
+      {{#each errors}}
+        <div class="error">
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
+      <form  action="/branch/addbranch" method="POST">
+        <div class="input-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" class="input-box" placeholder="Department Name"
+            >
+        </div>
+         <div class="input-group">
+          <label for="description">Description</label>
+          <input type="text" name="description" id="description" class="input-box" placeholder="Description"
+            >
+        </div>
+        <div class="input-group">
+          <label for="places_id">Places id</label>
+          <input type="text" name="places_id" id="places_id" class="input-box" placeholder="Places_id"
+            >
+        </div>
+         <div class="input-group">
+          <label for="latlong">latlong </label>
+          <input type="text" name="latlong" id="latlong" class="input-box" placeholder="latlong"
+            >
+        </div>
+        <input type="submit" value="Add Branch" class="btn btn-reverse">
+      </form>
+    </div>
+    </div>
+  

@@ -1,0 +1,14 @@
+table.dataTable tbody td{padding:9px 8px;height:auto}
+table.dataTable{margin-top:15px!important}
+table.dataTable th{white-space:nowrap}
+table.dataTable tr.selected,table.dataTable tr.selected .sorting_1{background-color:rgba(0,136,204,.8)!important}
+table.dataTable.collapsed tr td:first-child::before{top:15px!important;line-height:16px!important}
+table.dataTable.collapsed tr td:first-child{padding-left:30px!important}.dataTables_filter{float:right}
+div.dataTables_wrapper.form-control {border:1px solid rgba(197,214,222,.7) !important;box-shadow:none;font-size:1rem;color:#343434 !important;}
+table.dataTable.table-striped.DTFC_Cloned tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+    z-index: 1;
+}
+table.dataTable.table-striped.DTFC_Cloned tbody tr:nth-of-type(even) {
+    background-color: white;
+}

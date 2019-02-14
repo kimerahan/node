@@ -1,0 +1,31 @@
+<section id="add" class="container">
+  <div class="col-md-auto">
+    <div class="form-wrap">
+      <h1>Add An Employee</h1>
+     
+      {{#each errors}}
+        <div class="error">
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
+      <form  action="/departments/adddept" method="POST">
+        <div class="input-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" class="input-box" placeholder="Department Name"
+            >
+        </div>
+         <div class="input-group">
+          <label for="description">Description</label>
+          <input type="text" name="description" id="description" class="input-box" placeholder="Description"
+            >
+        </div>
+        <div class="input-group">
+          <label for="department_code">Department_code</label>
+          <input type="text" name="department_code" id="department_code" class="input-box" placeholder="Department_code"
+            >
+        </div>
+        <input type="submit" value="Add Employee" class="btn btn-reverse">
+      </form>
+    </div>
+    </div>
+  </section>

@@ -1,0 +1,17 @@
+<section id="branch" class="container">
+    <h3>All Branches</h3>
+
+    {{#each branches}}
+      <div class="branch">
+      <h4> Name: {{name}}</h4>
+      <h4></p>Description: {{description}}</h4>
+      <ul>
+        <li>places_id: {{places_id}}</li>
+         <li>latlong: {{latlong}}</li>
+      </ul>
+    </div>
+    {{else}}
+      <p>No Branches available</p>
+    {{/each}}
+    
+  </section>
